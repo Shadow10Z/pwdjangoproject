@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="{% static 'portfolio/css/style.css' %}" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="author" content="João Serralha">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <body>
+            <nav class="navegation">
+              <div class="navegation-left">
+                <img src="https://media.discordapp.net/attachments/1084203416294801419/1100796529247268934/1dc417f222594a82b0b24a6059eef40d_6.png" class="logo">
+                <a href="index.html" class="linkSlogan">乛ＳＨＡＤＯＷ ×͜×</a>
+              </div>
+                <div class="navegation-right">
+                  <input type="checkbox" id="switch" /><label id="label-togg" for="switch">Toggle</label>
+                  <a href="index" class="link">Home</a>
+                  <a href="index2" class="link">Projects</a>
+                  <a href="index3" class="link">Web</a>
+                </div>
+            </nav>
+              <main class="allMenus">
+                <div class="backgroundMenu">
+                  João Serralha
+                  <br>
+                  <br>
+                  Computer Engineering Student
+                  <br>
+                  <br>
+                  <script>
+            
+                    const nome = prompt("What is your name?");
+        
+                    // imprimir o nome em diferentes sítios
+                    console.log(`Hello, ${nome}!`);
+                    alert(`Welcome, ${nome}!`);
+                    document.write(`Hello ${nome}`);
+        
+                   </script>
+                </div>
+                <div id="test1">
+                  <input type="text" id="expressioninsert">
+                  <div id="legend"></div>
+                  <button onclick="inserirLegenda()" id="insert-btn">Insert</button>
+                </div>
+                
+                <div class="container">               
+                  <p>
+                    <article class="apresentation">
+                      <script>
+                        document.write(`Hello ${nome}`);
+                      </script>
+                      <h6>&#128075 About me</h6>
+                      <p>
+                        <ul class="motivations">
+                          <li>
+                            Took interest in programming when I was 12
+                          </li>
+                          <li>
+                            Always passionate for learning new things
+                          </li>
+                        </ul>
+                      </p>
+                      <br>
+                      <h6>&#128102 Personal Interests</h6>
+                      <p>
+                        <ul class="interests">
+                          <li>
+                            Spending time with friends
+                          </li>
+                          <li>
+                            Watching series, films and Esports Games
+                          </li>
+                          <li>
+                            Playing some games
+                          </li>
+                        </ul>
+                      </p>
+                      <br>
+                      <h6>&#128203 Soft Skills</h6>
+                      <p>
+                        <ul class="skills">
+                          <li>
+                            Loyal and trustful
+                          </li>
+                          <li>
+                            Focused and analytical
+                          </li>
+                          <li>
+                            Motivated and responsible
+                          </li>
+                        </ul>
+                      </p>
+                    </article>
+                  </p>             
+                  <div class="box">
+                      <div class="imgBox">
+                        <img src="https://cdn.discordapp.com/attachments/1084203416294801419/1101953037091754034/diagrama.drawio-3.png">
+                      </div>
+                      <div class="author-container">
+                        <p class="author-name">
+                          Hi! It's me
+                        </p>
+                        <p class="author-role">
+                          João Serralha
+                          <br>
+                          <script>
+                              document.write(`Hello ${nome}`);
+                          </script>
+                        </p>
+                      </div>
+                      <!-- Prevents stuff from getting bad -->
+                      <div></div>
+                  </div>
+                </div>
+              
+                <div id="test2">
+                  <p>Introduce an arithemetic expression:</p>
+                    <input type="text" id="expression">
+                    <br><br>
+                    <button id="calculate-btn">{ Calculate }</button>
+                    <button id="clear-btn">{ Clear Result }</button>
+                    <br><br>
+                  <p id="result"></p>
+                </div>
+                <div class="footerPage">
+                  <article class="footerInfo">
+                    <h6>Let's get in touch &#128681</h6>
+                    <p class="contactText">
+                      Need anything built, want to work together or simply want to have a chat?
+                    </p>
+                  </article>
+                    <br>
+                  <div>
+                    <a href="https://www.instagram.com/joaoserralha_/" class="icon icon--instagram">
+                      <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/shedawzera" class="icon icon--twitter">
+                      <i class="ri-twitter-line"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-serralha-b078ab232/" class="icon icon--linkedin">
+                      <i class="ri-linkedin-line"></i>
+                    </a>
+                    <a href="https://github.com/Shadow10Z" class="icon icon--github">
+                      <i class="ri-github-line"></i>
+                    </a>
+                  </div>
+                  <p id="footercopyrights">
+                    João Serralha © 2023 Universidade Lusófona de Lisboa -
+                  </p>
+                </div>
+              </main>
+           <script>
+              var myElement = document.getElementById('test1');
+              myElement.onmouseover = function() {
+                myElement.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1084203416294801419/1100805042245738658/image.png')";
+              };
+              myElement.onmouseout = function() {
+                myElement.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1084203416294801419/1100757115506806915/image.png')";
+              };
+              
+              var myElement2 = document.getElementById('test2');
+              myElement2.onmouseover = function() {
+                myElement2.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1084203416294801419/1100757115506806915/image.png')";
+              };
+              myElement2.onmouseout = function() {
+                myElement2.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1084203416294801419/1100805042245738658/image.png')";
+              };
+           </script>
+           <script>
+            const toggleBtn = document.getElementById('label-togg');
+            const content = document.querySelector('.footerPage');
+            const content2 = document.querySelector('.backgroundMenu');
+            const content3 = document.querySelector('.navegation');
+            const content4 = document.querySelector('.container');
+
+            toggleBtn.addEventListener('click', () => {
+              content.classList.toggle('dark-mode');
+              content2.classList.toggle('dark-mode');
+              content3.classList.toggle('dark-mode');
+              content4.classList.toggle('dark-mode');
+
+              // Salva o modo atual no localStorage
+              localStorage.setItem('dark-mode', content.classList.contains('dark-mode'));
+              localStorage.setItem('dark-mode', content2.classList.contains('dark-mode'));
+              localStorage.setItem('dark-mode', content3.classList.contains('dark-mode'));
+              localStorage.setItem('dark-mode', content4.classList.contains('dark-mode'));
+            });
+
+            // Configura o modo inicial
+            const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+            if (isDarkMode) {
+              content.classList.add('dark-mode');
+              content2.classList.add('dark-mode');
+              content3.classList.add('dark-mode');
+              content4.classList.add('dark-mode');
+            }
+           </script>
+           <script>
+            const data = new Date();
+            const mes = data.toLocaleString('default', { month: 'long' });
+            const dia = data.getDate();
+            const ano = data.getFullYear();
+            const dataFormatada = `${dia} de ${mes}, ${ano}`;
+            const elementoData = document.getElementById('footercopyrights');
+            elementoData.textContent += dataFormatada;
+           </script>
+           <script>
+            function inserirLegenda() {
+              let legenda = document.getElementById("expressioninsert").value;
+
+              document.getElementById("legend").innerHTML = legenda;
+            }
+           </script>
+           <script src="{% static 'portfolio/js/calculator.js' %}"></script>
+        </body>
+    </head>
+</html>

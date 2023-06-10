@@ -1,0 +1,827 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box; 
+  padding: 0; 
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: rgb(19, 19, 32);
+}
+
+nav a {
+  float: right;
+  font-size: 16px;
+  color: rgb(180, 180, 180);
+  text-align: center;
+  padding: 35px 25px;
+  text-decoration: none;
+}
+
+.navegation-right {
+  display: flex;
+
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+font-size: 16px;  
+border: none;
+outline: none;
+color: rgb(180, 180, 180);
+padding: 14px 16px;
+background-color: rgb(19, 19, 32);
+font-family: inherit;
+margin: 0;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+background-color: gray;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: rgb(228, 28, 28);
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+main > div {  
+/* centrando o <p> dos divs */
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 3em;
+}
+
+#toggle-btn {
+  outline: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  background: transparent;
+  color:  rgb(19, 180, 92);
+  text-transform: uppercase;
+  border: 3px solid  rgb(19, 180, 92);
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 40px;
+  bottom: 50px;
+  left: 366px;
+}
+
+#toggle-btn:hover{
+  color: #3a3a3f;
+}
+
+#toggle-btn span {
+  transition: all 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: gray;
+}
+
+#calculate-btn {
+  outline: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  background: transparent;
+  color:  #00d9ff;
+  text-transform: uppercase;
+  border: 3px solid  #00d9ff;
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 40px;
+  bottom: 2px;
+  left: 8px;
+}
+
+#calculate-btn:hover {
+  color: rgb(180, 19, 172);
+}
+
+#calculate-btn span {
+  transition: all 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: gray;
+}
+
+#clear-btn {
+  outline: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  background: transparent;
+  color: #00d9ff;
+  text-transform: uppercase;
+  border: 3px solid  #00d9ff;
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 40px;
+  bottom: 2px;
+  left: 23px;
+}
+
+#clear-btn:hover {
+  color: rgb(180, 19, 172);
+}
+
+#clear-btn span {
+  transition: all 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: rgb(128, 128, 128);
+}
+
+#insert-btn {
+  outline: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  background: transparent;
+  color: #00d9ff;
+  text-transform: uppercase;
+  border: 3px solid  #00d9ff;
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 40px;
+  bottom: 2px;
+  left: 23px;
+}
+
+#insert-btn:hover {
+  color: rgb(180, 19, 172);
+}
+
+#insert-btn span {
+  transition: all 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: rgb(128, 128, 128);
+}
+
+#expression[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #00eeff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00e1ff;
+}
+
+#expressioninsert[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #00eeff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00e1ff;
+}
+
+#result {
+  font-size: 60px;
+  position: inherit;
+  top: 80px;
+  right: 648px;
+  color: rgb(180, 19, 172);
+}
+
+#legend {
+  color: rgb(19, 180, 92);;
+}
+
+.btminesweeper {
+  outline: none;
+  padding: 1rem 1.5rem;
+  font-size: 2.5rem;
+  font-style: bold;
+  position: relative;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  border: 5px solid rgb(19, 180, 92);
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.btminesweeper:hover {
+  color: rgb(19, 180, 92);
+}
+
+.btminesweeper span {
+  transition: all 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: rgb(0, 0, 0); 
+}
+
+.btminesweeper .first {
+  right: 100%;
+  top: 0;
+}
+
+.btminesweeper:hover .first {
+  top: 0;
+  right: 0;
+}
+
+.btminesweeper .second {
+  left: 25%;
+  top: -100%;
+}
+
+.btminesweeper:hover .second {
+  top: 0;
+  left: 50%;
+}
+
+.btminesweeper .third {
+  left: 50%;
+  top: 100%;
+}
+
+.btminesweeper:hover .third {
+  top: 0;
+  left: 25%;
+}
+
+.btminesweeper .fourth {
+  left: 100%;
+  top: 0;
+}
+
+.btminesweeper:hover .fourth {
+  top: 0;
+  left: 0;
+}
+
+.btdeisijungle {
+  outline: none;
+  padding: 1rem 1.5rem;
+  font-size: 2.5rem;
+  font-style: bold;
+  position: relative;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  border: 5px solid rgb(19, 180, 92);
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.btdeisijungle:hover {
+  color: rgb(19, 180, 92);
+}
+
+.btdeisijungle span {
+  transition: all 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: rgb(0, 0, 0); 
+}
+
+.btdeisijungle .first {
+  right: 100%;
+  top: 0;
+}
+
+.btdeisijungle:hover .first {
+  top: 0;
+  right: 0;
+}
+
+.btdeisijungle .second {
+  left: 25%;
+  top: -100%;
+}
+
+.btdeisijungle:hover .second {
+  top: 0;
+  left: 50%;
+}
+
+.btdeisijungle .third {
+  left: 50%;
+  top: 100%;
+}
+
+.btdeisijungle:hover .third {
+  top: 0;
+  left: 25%;
+}
+
+.btdeisijungle .fourth {
+  left: 100%;
+  top: 0;
+}
+
+.btdeisijungle:hover .fourth {
+  top: 0;
+  left: 0;
+}
+
+.btdeisiflix {
+  outline: none;
+  padding: 1rem 1.5rem;
+  font-size: 2.5rem;
+  font-style: bold;
+  position: relative;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  border: 5px solid rgb(19, 180, 92);
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.btdeisiflix:hover {
+  color: rgb(19, 180, 92);
+}
+
+.btdeisiflix span {
+  transition: all 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background: rgb(0, 0, 0); 
+}
+
+.btdeisiflix .first {
+  right: 100%;
+  top: 0;
+}
+
+.btdeisiflix:hover .first {
+  top: 0;
+  right: 0;
+}
+
+.btdeisiflix .second {
+  left: 25%;
+  top: -100%;
+}
+
+.btdeisiflix:hover .second {
+  top: 0;
+  left: 50%;
+}
+
+.btdeisiflix .third {
+  left: 50%;
+  top: 100%;
+}
+
+.btdeisiflix:hover .third {
+  top: 0;
+  left: 25%;
+}
+
+.btdeisiflix .fourth {
+  left: 100%;
+  top: 0;
+}
+
+.btdeisiflix:hover .fourth {
+  top: 0;
+  left: 0;
+}
+
+.container {
+  height: 90vh;
+  background: rgb(19, 19, 32);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.container .box {
+  position: relative;
+  left: 250px;
+  width: 20rem;
+  height: 20rem;
+  margin: 5rem;
+  animation-name: exemplo;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.container .box:hover .imgBox {
+  transform: translate(-5rem, -5rem);
+}
+
+.container .box:hover .content {
+  transform: translate(3.5rem, 3.5rem);
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+.imgBox img {
+  width: 23.5rem;
+  height: 21rem;
+  object-fit: cover;
+  resize: both;
+}
+
+.author-name {
+  font-size: x-large;
+  display: block;
+  color:  rgb(19, 180, 92);
+}
+
+.author-role {
+  font-size: medium;
+  color:  rgb(19, 180, 92);
+}
+
+.author-container {
+/* definindo altura e cor */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px 10px;
+  height: auto;
+  background: rgb(19, 19, 32);
+  color: white;
+  animation-name: exemplo;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+#test1{
+  height: 40vh;
+  background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1100757115506806915/image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+#test2{
+  height: 40vh;
+  background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1100805042245738658/image.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  font-style: bold;
+  justify-content: space-evenly;
+  font-size: 25px;
+  transition: background-image 0.5s ease-in-out;
+  color: rgb(19, 180, 92);
+}
+
+.test3 {
+  height: 40vh;
+  background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1101916758950031360/1_ji5otads37yhlex1ld23fw.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.test9 {
+  height: 40vh;
+  background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1117072661332373606/w3_css-ar21.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.test4 {
+  height: 40vh;
+  background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1101931025329819768/board3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.test6 {
+  height: 40vh;
+  background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1102176022721470524/generatedHeaderImage-1660581268935.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.about {
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myVideo {
+  position: fixed;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.test5{
+  padding-top: 175px;
+  padding-bottom: 175px;
+  background:  rgb(19, 19, 32);
+}
+
+.test8 {
+  padding-top: 175px;
+  padding-bottom: 175px;
+  background:  rgb(19, 19, 32);
+  color: white;
+}
+
+.test7{
+  padding-top: 175px;
+  padding-bottom: 175px;
+  background:  rgb(19, 19, 32);
+  color: white;
+}
+
+.text1 {
+  font-size: 9vh;
+  text-shadow: -1px -1px 0 #b9b9b9, 1px -1px 0 #b9b9b9, -1px 1px 0 #b9b9b9, 1px 1px 0 #b9b9b9;
+  color: rgb(180, 180, 180);
+}
+
+.backgroundMenu {
+  font-weight: bold;
+  background-color: rgb(19, 19, 32);
+  color:  rgb(19, 180, 92);
+  text-align: center;
+  height: 84vh;
+}
+
+.infominesweeper {
+  position: absolute;
+  left: 125px;
+  font-size: 50px;
+  color:  rgb(19, 180, 92);
+}
+
+.infodeisijungle {
+  position: absolute;
+  left: 125px;
+  font-size: 20px;
+  color:  rgb(19, 180, 92);
+}
+
+.infodeisiflix {
+  position: absolute;
+  left: 125px;
+  font-size: 20px;
+  color:  rgb(19, 180, 92);
+}
+
+.apresentation {
+  position: absolute;
+  left: 125px;
+  color: rgb(180, 180, 180);
+}
+
+.motivations {
+  font-size: 20px;
+  color:  rgb(19, 180, 92);
+}
+
+.interests {
+  font-size: 20px;
+  color:  rgb(19, 180, 92);
+}
+
+.skills {
+  font-size: 20px;
+  color:  rgb(19, 180, 92);
+}
+
+.linkSlogan {
+  color: rgb(19, 180, 92);
+}
+
+.link {
+  color: rgb(19, 180, 92);
+}
+
+.footerPage {
+  display: block;
+  height: 50vh;
+  padding-top: 50px;
+  padding-left: 50px;
+  background: rgb(19, 19, 32);
+}
+
+.contactText {
+  font-size: 20px;
+  color: rgb(19, 180, 92);
+}
+
+h6 {
+  color: rgb(19, 180, 92);
+}
+
+.dark-mode {
+  background:rgb(255, 255, 255);
+}
+
+.icons {
+	display: flex;
+	column-gap: 25px;
+}
+.icon {
+	display: inline-flex;
+	width: 60px;
+	height: 60px;
+	text-decoration: none;
+	font-size: 26px;
+	color: rgb(19, 180, 92);
+	border-radius: 50%;
+	outline: 2px solid rgb(19, 180, 92);
+	transition-property: outline-offset, outline-color, background-color;
+	transition-duration: 0.25s;
+}
+.icon:hover {
+	outline-offset: 4px;
+}
+.icon i {
+	margin: auto;
+}
+.icon:hover i {
+	animation: shake 0.25s;
+}
+.icon--instagram:hover {
+	background-image: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	outline-color: #a02d76;
+}
+.icon--twitter:hover {
+	background-color: #1da1f2;
+	outline-color: #1da1f2;
+}
+.icon--linkedin:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5;
+}
+.icon--github:hover {
+	background-color: rgb(20, 20, 20);
+	outline-color: rgb(60, 60, 60);
+}
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
+}
+
+#footercopyrights {
+  text-align: center;
+  align-self: flex-end;
+  font-size: 0.77rem;
+  margin-top: 50px;
+  color: rgb(19, 180, 92);
+}
+
+#switch[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#label-togg {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#label-togg:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+#switch:checked + #label-togg {
+  background: rgb(19, 180, 92);
+}
+
+#switch:checked + #label-togg:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+#label-togg:active:after {
+  width: 70px;
+}
+
+#label-togg {
+  margin-top: 23px;
+  margin-right: 20px;
+}

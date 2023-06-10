@@ -3,23 +3,11 @@ import datetime
 
 # Create your views here.
 
-def layout_page_view(request):
-	
-    currentTime = datetime.datetime.now()
+def index_page_view(request):	
+    return render(request, 'portfolio/index.html')
 
-    context = {'hora': currentTime.hour}
+def index2_page_view(request):
+	return render(request, 'portfolio/index2.html')
 
-    return render(request, 'portfolio/layout.html', context)
-
-
-def apresentacao_page_view(request):
-	return render(request, 'portfolio/apresentacao.html')
-
-def competencias_page_view(request):
-	return render(request, 'portfolio/competencias.html')
-
-def formacao_page_view(request):
-	return render(request, 'portfolio/formacao.html')
-
-def projetos_page_view(request):
-	return render(request, 'portfolio/projetos.html')
+def index3_page_view(request):
+	return render(request, 'portfolio/index3.html')

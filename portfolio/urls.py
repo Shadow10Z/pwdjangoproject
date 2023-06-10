@@ -21,5 +21,7 @@ from . import views
 app_name = "portfolio"
 
 urlpatterns = [
-    path('layout', views.layout_page_view, name='layout')
+    path('index', views.index_page_view, name='index'),
+    path('index2', views.index2_page_view, name='index2'),
+    path('index3', views.index3_page_view, name='index3')
 ]

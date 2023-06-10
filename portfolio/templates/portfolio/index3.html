@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="{% static 'portfolio/css/style.css' %}" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="author" content="João Serralha">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <body>
+            <nav class="navegation">
+                <div class="navegation-left">
+                    <img src="https://media.discordapp.net/attachments/1084203416294801419/1100796529247268934/1dc417f222594a82b0b24a6059eef40d_6.png" class="logo">
+                    <a href="index.html" class="linkSlogan">乛ＳＨＡＤＯＷ ×͜×</a>
+                </div>
+                <div class="navegation-right">
+                    <input type="checkbox" id="switch" /><label id="label-togg" for="switch">Toggle</label>
+                    <a href="index" class="link">Home</a>
+                    <a href="index2" class="link">Projects</a>
+                    <a href="index3" class="link">Web</a>
+                </div>
+            </nav>
+            <main class="allMenus">
+              <div class="backgroundMenu">
+                &#128187 Web &#128187
+                <br>
+                <br>
+                What was used in this website
+              </div>
+              <div class="test3">
+                  <button class="btminesweeper" onclick="window.location.href = 'https://github.com/Shadow10Z/Minesweeper';">
+                    CSS, HTML & JS
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                    <span class="fourth"></span>
+                  </button>
+              </div>
+              
+              <div class="test8">       
+                <article class="infominesweeper">        
+                    <p>
+                        <h3>HTML</h3> HypterText Markup Language
+                        <br>
+                        <br>
+                        <h3>CSS</h3> Cascading Style Sheets
+                        <br>
+                        <br>
+                        <h3>JS</h3> JavaScript
+                    </p>             
+                </article>
+              </div>
+            
+              <div class="test4">
+                 <button class="btdeisijungle" onclick="window.location.href = 'https://github.com/antonio-antunes-a22202276/LP2-22202276-22202133';">
+                    DEISIJungle
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                    <span class="fourth"></span>
+                  </button>
+              </div>
+
+              <div class="test5">
+                <article class="infodeisijungle">
+                    <p>
+                        One day, in a savannah very (very) far from here, the animals decided to find out who would be the best athlete amongst them. To do so, they defined a set of sporting events that they would compete against each other - whoever won the most events would be considered the King of the Jungle. The news quickly reached Tarzan, who did not want to stop participating in the competitions, convinced that he would easily win.
+                    </p>
+                </article>
+              </div>
+
+              <div class="test6">
+                <button class="btdeisiflix" onclick="window.location.href = 'https://github.com/Shadow10Z/Deisiflix';">
+                    DEISIFLIX
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                    <span class="fourth"></span>
+                  </button>
+              </div>
+
+              <div class="test7">
+                <article class="infodeisiflix">
+                    <p>
+                        This project aims to develop an application in Java, that is capable of receiving and responding to requests for statistics on a movie database.
+                    </p>
+                </article>
+              </div>
+            </main>
+            <script src="{% static 'portfolio/js/darkmode.js' %}"></script>      
+        </body>
+    </head>
+</html>
