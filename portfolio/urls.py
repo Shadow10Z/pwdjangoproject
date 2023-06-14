@@ -23,5 +23,9 @@ app_name = "portfolio"
 urlpatterns = [
     path('index', views.index_page_view, name='index'),
     path('index2', views.index2_page_view, name='index2'),
-    path('index3', views.index3_page_view, name='index3')
+    path('index3', views.index3_page_view, name='index3'),
+    path('home', views.home_page_view, name='home'),
+    path('new/', views.new_post_view, name='new'),
+    path('edit/<int:post_id>', views.edit_post_view, name='edit'),
+    path('delete/<int:post_id>', views.delete_post_view, name='delete'),
 ]

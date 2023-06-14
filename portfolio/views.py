@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from .models import Post
+from .forms import PostForm
 import datetime
 
 # Create your views here.
@@ -11,3 +15,31 @@ def index2_page_view(request):
 
 def index3_page_view(request):
 	return render(request, 'portfolio/index3.html')
+
+def home_page_view(request):
+	context = {'posts': Post.objects.all()}
+	return render(request, 'portfolio/home.html', context)
+
+def new_post_view(request):
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('portfolio:home')
+    context = {'form': form}
+    return render(request, 'portfolio/new.html', context)
+
+def edit_post_view(request, post_id):
+    post = Post.objects.get(id=post_id)
+    form = PostForm(request.POST or None, instance=post)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:home'))
+
+    context = {'form': form, 'portfolio_id': post_id}
+    return render(request, 'portfolio/edit.html', context)
+
+
+def delete_post_view(request, post_id):
+    Post.objects.get(id=post_id).delete()
+    return HttpResponseRedirect(reverse('portfolio:home'))

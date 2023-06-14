@@ -556,7 +556,7 @@ font-size: 3em;
 
 .test9 {
   height: 40vh;
-  background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1117072661332373606/w3_css-ar21.png");
+  background-image: url("https://media.discordapp.net/attachments/1084203416294801419/1117079861387857930/html5-logo-for-web-development.png?width=852&height=473");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -576,9 +576,31 @@ font-size: 3em;
   opacity: 0.9;
 }
 
+.test10 {
+  height: 40vh;
+  background-image: url("https://media.discordapp.net/attachments/1084203416294801419/1117072661332373606/w3_css-ar21.png?width=945&height=473");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  opacity: 0.9;
+}
+
 .test6 {
   height: 40vh;
   background-image: url("https://cdn.discordapp.com/attachments/1084203416294801419/1102176022721470524/generatedHeaderImage-1660581268935.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.test11 {
+  height: 40vh;
+  background-image: url("https://media.discordapp.net/attachments/1084203416294801419/1118540049215148112/JavaScript-Logo.png?width=840&height=473");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -640,7 +662,7 @@ font-size: 3em;
 .infominesweeper {
   position: absolute;
   left: 125px;
-  font-size: 50px;
+  font-size: 20px;
   color:  rgb(19, 180, 92);
 }
 
