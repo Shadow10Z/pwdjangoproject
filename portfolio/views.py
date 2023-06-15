@@ -3,6 +3,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from .models import Post
 from .forms import PostForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
 import datetime
 
 # Create your views here.
@@ -43,3 +46,9 @@ def edit_post_view(request, post_id):
 def delete_post_view(request, post_id):
     Post.objects.get(id=post_id).delete()
     return HttpResponseRedirect(reverse('portfolio:home'))
+
+def like_post(request, post_id):
+    post = Post.objects.get(id=post_id)
+    post.likes += 1
+    post.save()
+    return redirect('portfolio:home')

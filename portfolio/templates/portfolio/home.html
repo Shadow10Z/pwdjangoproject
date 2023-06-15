@@ -3,7 +3,8 @@
 {% block main %}
     {% for post in posts %}
         <p> 
-           {{ portfolio.titulo }}
+           {{ post.titulo }}
+           <a href="{% url 'portfolio:like_post' post.id %}">Like</a>
            <a href="{% url 'portfolio:edit' post.id %}" class="btn btn-warning">Edit</a>
         </p>
    {% endfor %}

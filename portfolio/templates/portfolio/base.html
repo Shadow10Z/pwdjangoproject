@@ -11,16 +11,56 @@
         <meta charset="utf-8">
         <meta name="author" content="João Serralha">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+                    * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        .basecontainer {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        p {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+        
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        </style>
     </head>
     <body>
-        <header>
-            <h1>Blog</h1>
-            <p>App to manage posts inside a blog</p>
-            <main>
-                {% block main %}
+        <div class="basecontainer">
+            <header>
+                <h1>Blog</h1>
+                <p>App to manage posts inside a blog</p>
+                <main>
+                    {% block main %}
 
-                {% endblock %}
-            </main>
-        </header>
+                    {% endblock %}
+                </main>
+            </header>
+        </div>    
     </body>
 </html>

@@ -1,7 +1,7 @@
 {% extends 'portfolio/base.html' %}
 
 {% block main %}
-<h3>Post</h3>
+<h3>Blog</h3>
     <form action="{% url 'portfolio:edit' portfolio_id %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}

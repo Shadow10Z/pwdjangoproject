@@ -213,6 +213,14 @@ font-size: 3em;
   box-shadow: 0 0 5px #00e1ff;
 }
 
+#expressionsuccess[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #00eeff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00e1ff;
+}
+
 #expressioninsert[type="text"] {
   padding: 10px;
   font-size: 18px;
