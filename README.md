@@ -12,4 +12,4 @@ This project is focused on making a portfolio of myself, using different tools f
 
 Just a simple Welcome Page with some information: Name of author, name of user, Light/Dark mode, Bachelor, Projects button.
 
-![](pwproject1.png?raw=true "Welcome Page")
+![](pwproject1.jpg?raw=true "Welcome Page")
