@@ -21,4 +21,16 @@ Some personal information about myself, some personal interests and my soft skil
 
 ![](pwproject2.jpg?raw=true "About Me")
 
-### TODO
+---
+### JavaScript Playground
+
+In this portfolio, JavaScript has been used to make users do some interactions with the site, as well as other properties.
+The change of images when you pass with the cursor, the update day, a calculator, the light/dark mode, a function where it asks the user their name and it's displayed in 3 different places in the portfolio and finaly another function that asks the user to insert a phrase and it's displayed over an image.
+
+#### Calculator
+
+![](pwproject3.jpg?raw=true "Calculator")
+
+#### Light/Dark mode and update day
+
+![](pwproject4.jpg?raw=true "l/d&ud")
